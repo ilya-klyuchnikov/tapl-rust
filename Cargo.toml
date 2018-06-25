@@ -1,0 +1,17 @@
+[package]
+name = "tapl"
+version = "0.1.0"
+authors = ["Ilya Klyuchnikov <ilyaklyuchnikov@fb.com>"]
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "app"
+path = "src/app.rs"
+
+[dependencies]
+serde_json = "1.0"
+serde = "1.0.66"
+serde_derive = "1.0"
