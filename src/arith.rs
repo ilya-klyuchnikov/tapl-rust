@@ -20,7 +20,7 @@ pub enum Command {
 #[test]
 fn test_serde() {
     let term1 = Term::TmSucc {term: Box::new(Term::TmZero {})};
-    let json1 = serde_json::to_string(&term1).unwrap();
+    let json1: String = serde_json::to_string(&term1).unwrap();
     let term2: Term = serde_json::from_str(&json1).unwrap();
     assert_eq!(term1, term2);
 }
