@@ -12,7 +12,7 @@ pub enum Term {
     TmIsZero { term: Box<Term> },
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
 pub enum Command {
     EvalCommand { term: Box<Term> },
 }
